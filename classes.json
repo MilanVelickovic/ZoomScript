@@ -1,0 +1,75 @@
+[
+    {
+        "code": "IT255",
+        "mark": "P",
+        "host": "Vladimir Milićević",
+        "appointment": {
+            "day": "Monday",
+            "time": ["14:00", "14:50", "15:40"]
+        },
+        "link": "https://zoom.us/j/95290343726?pwd=c2NQVWhjTmpaMFUwS3ZvNUJoY0RiZz09"
+    },
+    {
+        "code": "IT255",
+        "mark": "V",
+        "host": "Aleksandar Jovanović",
+        "appointment": {
+            "day": "Monday",
+            "time": ["16:30", "17:20", "18:10"]
+        },
+        "link": "https://zoom.us/j/7228683236?pwd=SkdqbmVTTGhuN2NDbWRtV1BBTWRTZz09y"
+    },
+    {
+        "code": "CS324",
+        "mark": "P",
+        "host": "Nemanja Zdravković",
+        "appointment": {
+            "day": "Tuesday",
+            "time": ["09:50", "10:40", "11:30"]
+        },
+        "link": "https://us04web.zoom.us/j/72131170811?pwd=V1U5QWhZT3QvajkxSXFjMjdXMUJWQT09"
+    },
+    {
+        "code": "CS324",
+        "mark": "V",
+        "host": "Nemanja Zdravković",
+        "appointment": {
+            "day": "Tuesday",
+            "time": ["12:20", "13:10", "14:00"]
+        },
+        "link": "https://us04web.zoom.us/j/72131170811?pwd=V1U5QWhZT3QvajkxSXFjMjdXMUJWQT09"
+    },
+    {
+        "code": "IT335",
+        "mark": "P",
+        "mark1": "V",
+        "host": "Miloš Dražić",
+        "host1": "Goran Stamenović",
+        "appointment": {
+            "day": "Thursday",
+            "time": ["12:20", "13:10", "14:00", "14:50"]
+        },
+        "link": "https://zoom.us/j/91757623900?pwd=NDFZMkdWeG8rbW1uc0llSytDait5UT09",
+        "link1": "https://us04web.zoom.us/j/72389704690?pwd=NnFGc1g2SmxPWDdNMlNnYktoc1pvZz09"
+    },
+    {
+        "code": "CS225",
+        "mark": "P",
+        "host": "Nemanja Zdravković",
+        "appointment": {
+            "day": "Thursday",
+            "time": ["15:40", "16:30", "17:20"]
+        },
+        "link": "https://us04web.zoom.us/j/76464022890?pwd=RUUrWVhRSkQ4MHVsTjNtcnZFTllvdz09"
+    },
+    {
+        "code": "CS225",
+        "mark": "V",
+        "host": "Goran Stamenović",
+        "appointment": {
+            "day": "Thursday",
+            "time": ["18:10", "19:00"]
+        },
+        "link": "https://us04web.zoom.us/j/76909476610?pwd=TFRCWkQrV0EwQkcvOGx1WnF1R3BFQT09"
+    }
+]
