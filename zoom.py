@@ -50,7 +50,7 @@ def main():
     while True:
         wait_time = 60
         date = datetime.now()
-        time = f"{date.hour}:{date.minute}"
+        time = f"{date.strftime('%H')}:{date.minute}"
 
         classInProgress(day, time)
     
