@@ -25,14 +25,20 @@ def changeTime(current_time, addMinutes):
         new_minutes = int(current_time[3:]) + minutes
         return f"{current_time[0:2]}:{str(new_minutes)}"
 
+def getDifference(current_time, start_time):
+    if current_time[0:2] == start_time[0:2]:
+        return int(current_time[3:]) - int(start_time[3:])
+    else:
+        return (60 - int(start_time[3:])) + int(current_time[3:])
+
 def classInProgress(day, time):
     for _class in todays_classes:
         if _class["appointment"]["day"] == day:
             for i in _class['appointment']['time']:
                 if time > i and time < changeTime(i, 40):
-                    showAndRun(day, None, _class, True)
+                    showAndRun(day, time, _class, True, i)
                         
-def showAndRun(day, time, _class, inProgress):
+def showAndRun(day, time, _class, inProgress, start_time):
     params = ["mark", "host", "link"]
     if day == "Thursday" and _class["code"] == "IT335" and (int(date.strftime("%V")) % 2 != 0):
         params = ["mark1", "host1", "link1"]
@@ -42,9 +48,14 @@ def showAndRun(day, time, _class, inProgress):
         ans = input()
         if ans.lower() == 'y':
             web.open(_class[params[2]])
+            sleep(60 * 40)
+        else:
+            sleep(60 * (40 - getDifference(time, start_time)))
+
     else: 
         print(f"[{time}]: {_class['code']} {_class[params[0]]} meeting started!\n\t Host: {_class[params[1]]}")
         web.open(_class[params[2]])
+        sleep(60 * 40) 
 
 def main():
     while True:
@@ -53,11 +64,10 @@ def main():
         time = f"{date.strftime('%H')}:{date.minute}"
 
         classInProgress(day, time)
-    
+        
         for _class in todays_classes:
             if time in _class["appointment"]["time"]:
-                showAndRun(day, time, _class, False)
-                wait_time = 60 * 40
+                showAndRun(day, time, _class, False, time)
 
         if time == "19:05":
             break
